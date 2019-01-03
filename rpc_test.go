@@ -1119,7 +1119,7 @@ func TestEchoHandler(t *testing.T) {
 		t.Fatalf("Unexpected value returned: %s. Expected 'abc'", expStr)
 	}
 
-	tt := time.Now()
+	tt := time.Now().Round(0)
 	resp, err = c.Call(tt)
 	if err != nil {
 		t.Fatalf("Unexpected error: [%s]", err)
